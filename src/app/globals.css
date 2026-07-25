@@ -1,0 +1,59 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css");
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #132420;
+
+  /* 굿모닝INC 브랜드 컬러 (inc-lockup 로고 기준: 딥그린 + 골드) */
+  --color-brand: #00543a; /* gm-green: 심볼 메인 / 주요 버튼 */
+  --color-brand-dark: #003d2a;
+  --color-green: #0e7a54; /* morning 워드마크 그린 */
+  --color-green-lt: #5fa98a; /* 다크 배경용 그린 */
+  --color-gold: #cba258; /* gm-gold: 포인트 / 화살표 / 마침표 */
+  --color-navy: #132420; /* gm-ink */
+  --color-dark: #12241f; /* 다크 배경 (푸터 등) */
+  --color-cream: #f7f6f2; /* gm-cream: 라이트 배경 */
+  --color-muted: #5c6b64;
+  --color-muted-2: #94a29b;
+  --color-border: #dde6e0;
+  --color-accent-bg: #e8f0eb;
+  --color-accent-green-bg: #e4efe9;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-brand: var(--color-brand);
+  --color-brand-dark: var(--color-brand-dark);
+  --color-green: var(--color-green);
+  --color-green-lt: var(--color-green-lt);
+  --color-gold: var(--color-gold);
+  --color-navy: var(--color-navy);
+  --color-dark: var(--color-dark);
+  --color-cream: var(--color-cream);
+  --color-muted: var(--color-muted);
+  --color-muted-2: var(--color-muted-2);
+  --color-border: var(--color-border);
+  --color-accent-bg: var(--color-accent-bg);
+  --color-accent-green-bg: var(--color-accent-green-bg);
+  --font-sans: "Pretendard", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section[id] {
+  scroll-margin-top: 84px;
+}

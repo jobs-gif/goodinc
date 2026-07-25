@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="360" viewBox="0 0 420 360" role="img" aria-label="GOODMORNING INC.">
+  <rect width="420" height="360" fill="#0E1B2A"></rect>
+  <g transform="translate(20,20)">
+    <circle cx="50" cy="50" r="32" fill="none" stroke="#3FB3E6" stroke-width="12" stroke-linecap="round" stroke-dasharray="162 39" transform="rotate(35 50 50)"></circle>
+    <line x1="40" y1="50" x2="78" y2="50" stroke="#7DCB47" stroke-width="11" stroke-linecap="round"></line>
+    <path d="M74 40 L92 50 L74 60 Z" fill="#7DCB47"></path>
+  </g>
+  <text x="120" y="55" font-family="Pretendard, Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="0.3">
+    <tspan fill="#3FB3E6">good</tspan><tspan fill="#7DCB47">morning</tspan>
+  </text>
+  <text x="20" y="150" font-family="Pretendard, Arial, sans-serif" font-size="50" font-weight="900" letter-spacing="-1" fill="#fff">INC<tspan fill="#7DCB47">.</tspan></text>
+</svg>

@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" role="img" aria-label="app icon">
+  <rect width="120" height="120" rx="28" fill="#00543A"></rect>
+  <g transform="translate(21,21)"><circle cx="50" cy="50" r="30" fill="none" stroke="#fff" stroke-width="11" stroke-linecap="round" stroke-dasharray="151 37" transform="rotate(35 50 50)"></circle><line x1="42" y1="50" x2="74" y2="50" stroke="#CBA258" stroke-width="10" stroke-linecap="round"></line><path d="M70 41 L86 50 L70 59 Z" fill="#CBA258"></path></g>
+</svg>
