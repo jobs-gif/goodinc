@@ -49,7 +49,7 @@ export default function Footer() {
           </div>
           <ul className="flex flex-col gap-2.5 text-[14px]">
             <li>전화 041-551-5111</li>
-            <li>이메일 jobs@goodos.co.kr</li>
+            <li>이메일 goodos@goodos.co.kr</li>
             <li>주소 충남 천안시 동남구 충절로 128, 102호</li>
           </ul>
         </div>

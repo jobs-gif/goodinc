@@ -26,7 +26,7 @@ export default function ContactCta() {
             041-551-5111 전화 상담 →
           </a>
           <a
-            href="mailto:jobs@goodos.co.kr"
+            href="mailto:goodos@goodos.co.kr"
             className="border border-white/45 text-white font-semibold text-[16px] px-[30px] py-[17px] rounded-full hover:bg-white/10 transition-colors"
           >
             이메일로 문의하기
@@ -47,7 +47,7 @@ export default function ContactCta() {
               이메일
             </div>
             <div className="text-white text-[15px] font-medium break-all">
-              jobs@goodos.co.kr
+              goodos@goodos.co.kr
             </div>
           </div>
           <div>

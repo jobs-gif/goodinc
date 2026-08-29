@@ -8,10 +8,6 @@ type Service = {
   image: string;
   video: string;
   objectPosition: string;
-  /** true when no dedicated photo/video exists yet — renders a brand-gradient
-   *  placeholder with an icon instead of misrepresenting the service with a
-   *  mismatched stock asset. Swap in real footage and drop this flag. */
-  placeholder?: boolean;
   title: string;
   desc: string;
   short: string;
@@ -28,19 +24,18 @@ const SERVICES: Service[] = [
     video: "/assets/vid-factory.mp4",
     objectPosition: "center center",
     title: "생산 도급\n운영 관리",
-    desc: "전자·기계·식품 등 산업별 맞춤형 제조 라인 도급",
+    desc: "전자·기계·식품 등 맞춤형 제조 라인 도급",
     short: "생산 도급",
     shortDesc: "제조 라인 운영",
-    legalBasis: ["생산 및 제조업", "그외 기타사업 지원 서비스업", "인력공급 및 고용알선"],
+    legalBasis: ["생산 및 제조업", "인력공급 및 고용알선", "기타사업 지원 서비스업"],
     details: [
-      "전자 · 기계 · 식품 등 산업별 맞춤형 제조 라인 도급 운영",
-      "제품 조립 · 포장 · 출하 전 공정 검사 및 위탁 관리",
-      "데이터 기반의 생산성 분석을 통한 효율적인 공정 개선 제안",
-      "엄격한 품질검사(QC) 프로세스 수립 및 불량률 제로화 관리",
-      "체계적인 성과 관리 및 정기 월간 리포팅 제공",
+      "산업별 맞춤형 제조 라인 도급 운영",
+      "조립 · 포장 · 출하 전 공정 검사",
+      "데이터 기반 공정 개선 제안",
+      "품질검사(QC)로 불량률 관리",
+      "월간 성과 리포팅 제공",
     ],
-    detailNote:
-      "숙련된 현장 관리자와 공정 최적화 기술을 통해 생산성은 높이고, 납기 지연과 품질 리스크는 완벽히 해결합니다.",
+    detailNote: "숙련된 현장 관리자가 상주하며 생산성은 높이고 품질 리스크는 낮춥니다.",
   },
   {
     no: "02",
@@ -48,19 +43,18 @@ const SERVICES: Service[] = [
     video: "/assets/vid-logistics.mp4",
     objectPosition: "center 40%",
     title: "물류 · 유통\n위탁 운영",
-    desc: "물류센터부터 재고 관리까지 통합 위탁 운영",
+    desc: "물류센터부터 재고 관리까지 통합 운영",
     short: "물류 · 유통",
     shortDesc: "창고 · 위탁 운영",
-    legalBasis: ["복합운송 주선업", "인력공급 및 고용알선", "그외 기타사업 지원 서비스업", "각호에 관련된 부대사업"],
+    legalBasis: ["복합운송 주선업", "인력공급 및 고용알선", "부대사업 전반"],
     details: [
-      "대형 물류센터 및 허브 창고 통합 위탁 운영",
-      "신속 · 정확한 입출고 관리, 피킹(Picking) · 패킹(Packing) · 정밀 검수",
-      "실시간 전산 시스템(WMS) 기반의 체계적인 재고 자산 관리",
-      "물류 전문 상하차, 지게차 조작 및 숙련된 운반 인력 운영",
-      "성수기 · 프로모션 물량 폭증 시 신속하고 탄력적인 인력 증원 대응",
+      "물류센터 · 허브창고 통합 위탁 운영",
+      "입출고 · 피킹 · 패킹 · 검수 전 과정 관리",
+      "WMS 기반 실시간 재고 관리",
+      "상하차 · 지게차 등 전문 인력 운영",
+      "성수기 물량 급증 시 탄력 인력 투입",
     ],
-    detailNote:
-      "정교한 물류 프로세스 구축과 기동성 있는 전문 인력 매칭으로, 물류 효율성은 극대화하고 고정비 부담은 혁신적으로 줄여드립니다.",
+    detailNote: "정교한 물류 프로세스와 기동성 있는 인력 매칭으로 효율은 높이고 비용은 줄입니다.",
   },
   {
     no: "03",
@@ -68,19 +62,18 @@ const SERVICES: Service[] = [
     video: "/assets/vid-handshake.mp4",
     objectPosition: "center 35%",
     title: "인력 파견 ·\nHR 아웃소싱",
-    desc: "23년 매칭 노하우, 준법 인사관리 시스템",
+    desc: "23년 매칭 노하우, 준법 인사관리",
     short: "인력 파견",
     shortDesc: "HR 아웃소싱",
-    legalBasis: ["인력공급 및 고용알선", "근로자 파견업", "인재 파견업", "경영 컨설팅업"],
+    legalBasis: ["인력공급 및 고용알선", "근로자 파견업", "경영 컨설팅업"],
     details: [
-      "사무 지원 및 전문 비서 파견 운영",
-      "F&B, 유통 · 판매, 고객 서비스 인력 공급",
-      "채용 대행 및 기업 맞춤형 인재 발굴 (고용 알선)",
-      "철저한 인사 · 노무 준법 관리 및 리스크 대응",
-      "파견 근로자 맞춤형 복리후생 및 현장 밀착 케어",
+      "사무 · 비서직 파견 운영",
+      "F&B · 유통 · 고객서비스 인력 공급",
+      "맞춤형 채용대행 및 인재 발굴",
+      "인사 · 노무 준법 관리",
+      "파견 근로자 복리후생 케어",
     ],
-    detailNote:
-      "23년간 축적된 매칭 노하우와 철저한 준법 관리를 바탕으로, 고객사 비즈니스에 가장 적합한 최적의 인적 자원(HR) 솔루션을 제공합니다.",
+    detailNote: "23년 매칭 노하우와 철저한 준법 관리로 가장 적합한 인적자원을 연결합니다.",
   },
   {
     no: "04",
@@ -88,46 +81,37 @@ const SERVICES: Service[] = [
     video: "/assets/vid-building.mp4",
     objectPosition: "center 30%",
     title: "빌딩 · 시설\n유지 관리",
-    desc: "건물 환경 · 설비 통합 운영 서비스",
+    desc: "건물 환경 · 설비 통합 운영",
     short: "빌딩 · 시설",
     shortDesc: "설비 유지 관리",
-    legalBasis: [
-      "건물시설관리용역",
-      "시설물 유지관리업 · 부동산 관리업",
-      "공동주택 · 집합건물 · 빌딩및시설물 관리업",
-      "냉 · 난방 설비업 · 일반건설업 · 주차장관리업",
-      "수처리사업 · 건축엔지니어링업",
-    ],
+    legalBasis: ["건물시설관리용역", "시설물 유지관리업", "공동주택 · 집합건물 관리업"],
     details: [
-      "건물 종합 관리(FM) 위탁 및 공동주택 · 집합건물 관리",
-      "전기 · 소방 · 냉난방 설비 관리 및 시설물 점검 · 유지보수",
-      "상하수도 · 정화조 등 수처리 관리 및 건축엔지니어링 자문",
+      "전기 · 소방 · 냉난방 설비 관리",
+      "시설물 정기 점검 및 유지보수",
       "주차 관리 · 안내 데스크 운영",
+      "수처리 · 정화조 관리",
       "법정 안전 점검 대응",
     ],
-    detailNote:
-      "설비 기술 전문가와 체계적인 관리 인력의 협업을 통해, 365일 입주민이 안심할 수 있는 가장 안전하고 쾌적한 빌딩 환경을 만듭니다.",
+    detailNote: "설비 전문가와 관리 인력이 협업해 365일 안전하고 쾌적한 환경을 만듭니다.",
   },
   {
     no: "05",
     image: "/assets/cat-building.jpg",
     video: "/assets/vid-building.mp4",
     objectPosition: "center center",
-    placeholder: true,
     title: "보안 · 시설\n경비",
-    desc: "시설경비업 정식 허가, 24시간 통합 모니터링",
+    desc: "시설경비업 정식 허가, 24시간 모니터링",
     short: "보안 · 경비",
     shortDesc: "시설 경비",
-    legalBasis: ["시설경비업", "경비 용역업", "사업시설유지 · 관리 서비스업", "공동주택 · 집합건물 관리업"],
+    legalBasis: ["시설경비업", "경비 용역업", "사업시설 관리 서비스업"],
     details: [
-      "상주 경비 및 정기 순찰 인력 운영",
-      "출입통제 · 방문객 관리 시스템 운영",
-      "CCTV 통합 관제 및 24시간 모니터링",
-      "비상상황 대응 매뉴얼 수립 및 훈련",
-      "공동주택 · 집합건물 경비 위탁 운영",
+      "상주 경비 및 정기 순찰",
+      "출입통제 · 방문객 관리",
+      "CCTV 통합 관제 24시간 운영",
+      "비상상황 대응 매뉴얼 운영",
+      "공동주택 · 집합건물 경비 위탁",
     ],
-    detailNote:
-      "전문 인력을 통해 출입 통제와 빈틈없는 모니터링 시스템으로, 고객사의 자산을 안전하게 보호하고 안전한 비즈니스 환경을 만듭니다.",
+    detailNote: "빈틈없는 출입통제와 모니터링으로 고객사의 자산을 안전하게 지킵니다.",
   },
   {
     no: "06",
@@ -135,37 +119,20 @@ const SERVICES: Service[] = [
     video: "/assets/vid-cleaning.mp4",
     objectPosition: "center center",
     title: "미화 · 위생\n관리",
-    desc: "위생관리용역업 허가, 친환경 클리닝 시스템",
+    desc: "위생관리용역업 허가, 친환경 클리닝",
     short: "미화 · 위생",
     shortDesc: "위생 관리",
-    legalBasis: ["위생관리용역업", "청소 용역업", "소독 방제업", "지하 및 고가 저수조 청소업", "조경 관리업"],
+    legalBasis: ["위생관리용역업", "청소 용역업", "소독 방제업"],
     details: [
-      "오피스 빌딩, 상업 시설 상시 미화 용역 운영",
-      "바닥 코팅, 외벽 청소 등 분기별 특수 클리닝",
-      "감염병 예방을 위한 정기 소독 및 맞춤 방역 서비스",
-      "인체 무해 친환경 약품 및 고성능 전문 청소 장비 도입",
-      "실시간 미화 청결도 점검 및 철저한 위생 관리 운영",
+      "오피스 · 상업시설 상시 미화",
+      "분기별 특수 클리닝 (바닥 · 외벽)",
+      "정기 소독 및 맞춤 방역",
+      "친환경 약품 · 전문 장비 사용",
+      "실시간 청결도 점검",
     ],
-    detailNote:
-      "전문 위생 교육을 수료한 미화 전문가들이 빌딩의 가치와 위생 등급을 높이고, 입주민에게 가장 쾌적한 공간을 선사합니다.",
+    detailNote: "전문 교육을 받은 미화 인력이 위생 등급을 높이고 쾌적한 공간을 만듭니다.",
   },
 ];
-
-function ShieldIcon({ className }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={1.4}
-      className={className}
-      aria-hidden="true"
-    >
-      <path d="M12 2.5l7.5 3v5.4c0 5-3.2 8.6-7.5 10.6-4.3-2-7.5-5.6-7.5-10.6V5.5l7.5-3z" />
-      <path d="M8.75 12l2.25 2.25L15.5 9.5" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
 
 function ServiceModal({
   service,
@@ -199,27 +166,16 @@ function ServiceModal({
       />
       <div className="relative bg-white rounded-3xl overflow-hidden shadow-2xl w-full max-w-[720px] max-h-[90vh] overflow-y-auto">
         <div className="relative h-[220px] md:h-[280px] bg-[#1a2420]">
-          {service.placeholder ? (
-            <div
-              className="absolute inset-0 flex items-center justify-center"
-              style={{
-                background: "linear-gradient(135deg, #12241F 0%, #1A3A2E 100%)",
-              }}
-            >
-              <ShieldIcon className="w-20 h-20 text-gold/40" />
-            </div>
-          ) : (
-            <video
-              src={service.video}
-              autoPlay
-              muted
-              loop
-              playsInline
-              poster={service.image}
-              className="absolute inset-0 w-full h-full object-cover"
-              style={{ objectPosition: service.objectPosition }}
-            />
-          )}
+          <video
+            src={service.video}
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster={service.image}
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{ objectPosition: service.objectPosition }}
+          />
           <div
             className="absolute inset-0"
             style={{
@@ -313,25 +269,14 @@ export default function Services() {
             onClick={() => setSelected(s)}
             className="relative rounded-[22px] overflow-hidden bg-[#cfd2da] aspect-[4/5] text-left cursor-pointer group"
           >
-            {s.placeholder ? (
-              <div
-                className="absolute inset-0 flex items-center justify-center transition-transform duration-500 group-hover:scale-105"
-                style={{
-                  background: "linear-gradient(135deg, #12241F 0%, #1A3A2E 100%)",
-                }}
-              >
-                <ShieldIcon className="w-16 h-16 text-gold/30" />
-              </div>
-            ) : (
-              <Image
-                src={s.image}
-                alt={s.short}
-                fill
-                sizes="(max-width: 768px) 100vw, 420px"
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-                style={{ objectPosition: s.objectPosition }}
-              />
-            )}
+            <Image
+              src={s.image}
+              alt={s.short}
+              fill
+              sizes="(max-width: 768px) 100vw, 420px"
+              className="object-cover transition-transform duration-500 group-hover:scale-105"
+              style={{ objectPosition: s.objectPosition }}
+            />
             <div
               className="absolute inset-0"
               style={{
