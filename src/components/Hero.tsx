@@ -1,3 +1,5 @@
+import InquiryButton from "./InquiryButton";
+
 export default function Hero() {
   return (
     <section id="top" className="relative h-[640px] md:h-[720px] overflow-hidden bg-[#1b1f29]">
@@ -77,12 +79,9 @@ export default function Hero() {
           모든 현장을 책임집니다.
         </p>
         <div className="flex flex-wrap gap-3.5">
-          <a
-            href="#contact"
-            className="bg-brand text-white font-bold text-[16px] px-[30px] py-[17px] rounded-full hover:bg-brand-dark transition-colors"
-          >
+          <InquiryButton className="bg-brand text-white font-bold text-[16px] px-[30px] py-[17px] rounded-full hover:bg-brand-dark transition-colors cursor-pointer">
             견적 요청하기 →
-          </a>
+          </InquiryButton>
           <a
             href="#services"
             className="border border-white/45 text-white font-semibold text-[16px] px-[30px] py-[17px] rounded-full hover:bg-white/10 transition-colors"

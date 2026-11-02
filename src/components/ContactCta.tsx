@@ -1,3 +1,5 @@
+import InquiryButton from "./InquiryButton";
+
 export default function ContactCta() {
   return (
     <section id="contact" className="mx-auto max-w-[1280px] px-6 py-14 md:py-20">
@@ -19,17 +21,20 @@ export default function ContactCta() {
           굿모닝아이앤씨가 함께 설계해 드립니다.
         </p>
         <div className="flex flex-wrap justify-center gap-3.5 mb-12">
+          <InquiryButton className="bg-gold text-navy font-bold text-[16px] px-[30px] py-[17px] rounded-full hover:brightness-105 transition cursor-pointer">
+            견적 · 문의 접수하기 →
+          </InquiryButton>
           <a
             href="tel:041-551-5111"
-            className="bg-gold text-navy font-bold text-[16px] px-[30px] py-[17px] rounded-full hover:brightness-105 transition"
+            className="border border-white/45 text-white font-semibold text-[16px] px-[30px] py-[17px] rounded-full hover:bg-white/10 transition-colors"
           >
-            041-551-5111 전화 상담 →
+            041-551-5111 전화 상담
           </a>
           <a
             href="mailto:goodos@goodos.co.kr"
             className="border border-white/45 text-white font-semibold text-[16px] px-[30px] py-[17px] rounded-full hover:bg-white/10 transition-colors"
           >
-            이메일로 문의하기
+            이메일 문의
           </a>
         </div>
 

@@ -5,10 +5,11 @@ import Services from "@/components/Services";
 import Strengths from "@/components/Strengths";
 import ContactCta from "@/components/ContactCta";
 import Footer from "@/components/Footer";
+import InquiryProvider from "@/components/InquiryProvider";
 
 export default function Home() {
   return (
-    <>
+    <InquiryProvider>
       <Header />
       <main className="flex-1">
         <Hero />
@@ -18,6 +19,6 @@ export default function Home() {
         <ContactCta />
       </main>
       <Footer />
-    </>
+    </InquiryProvider>
   );
 }

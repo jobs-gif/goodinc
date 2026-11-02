@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import InquiryButton from "./InquiryButton";
+import { SECTORS } from "./InquiryProvider";
 
 type Service = {
   no: string;
@@ -250,13 +252,13 @@ function ServiceModal({
           <p className="m-0 mb-7 text-muted text-[14px] leading-[1.7] bg-accent-bg rounded-xl px-5 py-4">
             {service.detailNote}
           </p>
-          <a
-            href="#contact"
+          <InquiryButton
+            sector={SECTORS[Number(service.no) - 1]}
             onClick={onClose}
-            className="inline-flex items-center gap-2 bg-brand text-white font-bold text-[15px] px-7 py-3.5 rounded-full hover:bg-brand-dark transition-colors"
+            className="inline-flex items-center gap-2 bg-brand text-white font-bold text-[15px] px-7 py-3.5 rounded-full hover:bg-brand-dark transition-colors cursor-pointer"
           >
             이 분야 견적 문의하기 →
-          </a>
+          </InquiryButton>
         </div>
       </div>
     </div>

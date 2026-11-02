@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { useInquiry } from "./InquiryProvider";
 
 const NAV_ITEMS = [
   { label: "회사 소개", href: "#about" },
@@ -12,6 +13,7 @@ const NAV_ITEMS = [
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const { open: openInquiry } = useInquiry();
 
   return (
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-border">
@@ -46,12 +48,13 @@ export default function Header() {
           ))}
         </nav>
 
-        <a
-          href="#contact"
-          className="hidden md:inline-flex items-center gap-2 bg-brand text-white font-bold text-[14px] px-6 py-3 rounded-full hover:bg-brand-dark transition-colors"
+        <button
+          type="button"
+          onClick={() => openInquiry()}
+          className="hidden md:inline-flex items-center gap-2 bg-brand text-white font-bold text-[14px] px-6 py-3 rounded-full hover:bg-brand-dark transition-colors cursor-pointer"
         >
           견적 요청하기 →
-        </a>
+        </button>
 
         <button
           aria-label="메뉴 열기"
@@ -76,13 +79,16 @@ export default function Header() {
               {item.label}
             </a>
           ))}
-          <a
-            href="#contact"
-            onClick={() => setOpen(false)}
+          <button
+            type="button"
+            onClick={() => {
+              setOpen(false);
+              openInquiry();
+            }}
             className="inline-flex items-center justify-center gap-2 bg-brand text-white font-bold text-[14px] px-6 py-3 rounded-full"
           >
             견적 요청하기 →
-          </a>
+          </button>
         </div>
       )}
     </header>
