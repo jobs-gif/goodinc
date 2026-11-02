@@ -58,3 +58,14 @@ section[id] {
   scroll-margin-top: 84px;
 }
 
+.policy p {
+  margin: 0;
+}
+.policy ul {
+  margin: 0;
+  padding-left: 1.2em;
+  list-style: disc;
+}
+.policy li + li {
+  margin-top: 6px;
+}

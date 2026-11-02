@@ -5,6 +5,7 @@ import {
   useCallback,
   useContext,
   useEffect,
+  useRef,
   useState,
   type FormEvent,
   type ReactNode,
@@ -58,6 +59,7 @@ function InquiryModal({
 }) {
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState("");
+  const openedAt = useRef(Date.now());
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -74,7 +76,10 @@ function InquiryModal({
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const fd = new FormData(e.currentTarget);
-    const payload = Object.fromEntries(fd.entries());
+    const payload = {
+      ...Object.fromEntries(fd.entries()),
+      elapsed: Date.now() - openedAt.current,
+    };
     setStatus("sending");
     setError("");
     try {
@@ -236,7 +241,15 @@ function InquiryModal({
               />
               <span>
                 문의 응대를 위한 개인정보(회사명·성명·연락처·이메일) 수집 및
-                이용에 동의합니다. 수집 정보는 문의 처리 목적으로만 사용됩니다.
+                이용에 동의합니다. 수집 정보는 문의 처리 목적으로만 사용됩니다.{" "}
+                <a
+                  href="/privacy"
+                  target="_blank"
+                  rel="noopener"
+                  className="font-semibold text-brand underline underline-offset-2"
+                >
+                  개인정보처리방침 보기
+                </a>
               </span>
             </label>
             {status === "error" && (

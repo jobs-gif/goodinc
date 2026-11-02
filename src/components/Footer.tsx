@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -59,7 +60,12 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="mx-auto max-w-[1280px] px-6 py-6 text-[12px] text-white/40 flex flex-col sm:flex-row gap-2 sm:justify-between">
           <span>© 2026 GOODMORNING INC. All rights reserved.</span>
-          <span>사업자등록번호 337-88-03907</span>
+          <span className="flex flex-wrap gap-x-4 gap-y-1">
+            <Link href="/privacy" className="underline underline-offset-2 hover:text-white/70">
+              개인정보처리방침
+            </Link>
+            <span>사업자등록번호 337-88-03907</span>
+          </span>
         </div>
       </div>
     </footer>
