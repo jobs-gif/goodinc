@@ -24,18 +24,6 @@ export default function ContactCta() {
           <InquiryButton className="bg-gold text-navy font-bold text-[16px] px-[30px] py-[17px] rounded-full hover:brightness-105 transition cursor-pointer">
             견적 · 문의 접수하기 →
           </InquiryButton>
-          <a
-            href="tel:041-551-5111"
-            className="border border-white/45 text-white font-semibold text-[16px] px-[30px] py-[17px] rounded-full hover:bg-white/10 transition-colors"
-          >
-            041-551-5111 전화 상담
-          </a>
-          <a
-            href="mailto:goodos@goodos.co.kr"
-            className="border border-white/45 text-white font-semibold text-[16px] px-[30px] py-[17px] rounded-full hover:bg-white/10 transition-colors"
-          >
-            이메일 문의
-          </a>
         </div>
 
         <div className="grid sm:grid-cols-3 gap-6 max-w-[720px] mx-auto text-left border-t border-white/15 pt-10">

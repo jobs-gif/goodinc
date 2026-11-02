@@ -56,3 +56,29 @@ function out(obj) {
   return ContentService.createTextOutput(JSON.stringify(obj))
     .setMimeType(ContentService.MimeType.JSON);
 }
+
+/**
+ * 시트 정리용 (편집기에서 한 번만 실행): 파일 이름을 바꾸고,
+ * 문의접수 탭을 맨 앞에 두어 열자마자 보이게 하며, 비어 있는 기본 시트는 삭제합니다.
+ * 웹 앱 코드(doPost)는 바뀌지 않으므로 다시 배포할 필요가 없습니다.
+ */
+function setup() {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  ss.rename("굿모닝아이앤씨");
+
+  var sheet = ss.getSheetByName(SHEET_NAME) || ss.insertSheet(SHEET_NAME);
+  if (sheet.getLastRow() === 0) {
+    sheet.appendRow(HEADERS);
+    sheet.setFrozenRows(1);
+    sheet.getRange(1, 1, 1, HEADERS.length).setFontWeight("bold");
+  }
+  ss.setActiveSheet(sheet);
+  ss.moveActiveSheet(1);
+
+  ss.getSheets().forEach(function (s) {
+    var isEmpty = s.getLastRow() === 0 && s.getLastColumn() === 0;
+    if (s.getName() !== SHEET_NAME && isEmpty && ss.getSheets().length > 1) {
+      ss.deleteSheet(s);
+    }
+  });
+}
