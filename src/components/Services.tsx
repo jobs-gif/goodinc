@@ -98,8 +98,8 @@ const SERVICES: Service[] = [
   },
   {
     no: "05",
-    image: "/assets/security-guard.svg",
-    video: "",
+    image: "/assets/security-guards-entrance.jpg",
+    video: "/assets/security-center-video.mp4",
     objectPosition: "center center",
     title: "보안 · 시설\n경비",
     desc: "시설경비업 정식 허가, 24시간 모니터링",
@@ -109,7 +109,6 @@ const SERVICES: Service[] = [
     details: [
       "상주 경비 및 정기 순찰",
       "출입통제 · 방문객 관리",
-      "CCTV 통합 관제 24시간 운영",
       "비상상황 대응 매뉴얼 운영",
       "공동주택 · 집합건물 경비 위탁",
     ],
@@ -168,36 +167,16 @@ function ServiceModal({
       />
       <div className="relative bg-white rounded-3xl overflow-hidden shadow-2xl w-full max-w-[720px] max-h-[90vh] overflow-y-auto">
         <div className="relative h-[220px] md:h-[280px] bg-[#1a2420]">
-          {service.no === "05" ? (
-            <div className="security-feed absolute inset-0 overflow-hidden bg-[#13241f]">
-              <Image
-                src={service.image}
-                alt="CCTV 보안 모니터링 콘셉트"
-                fill
-                unoptimized
-                className="object-cover"
-                style={{ objectPosition: service.objectPosition }}
-              />
-              <div className="security-feed__scan" />
-              <div className="absolute left-5 top-5 flex items-center gap-2 rounded-full border border-white/30 bg-[#12241f]/75 px-3 py-2 text-[11px] font-semibold tracking-[.12em] text-white backdrop-blur-sm">
-                <span className="security-feed__dot" /> LIVE · SECURITY CAM 05
-              </div>
-              <div className="absolute bottom-4 right-5 rounded bg-[#12241f]/70 px-2.5 py-1.5 font-mono text-[10px] tracking-[.08em] text-white/80">
-                ACCESS CONTROL · 24H
-              </div>
-            </div>
-          ) : (
-            <video
-              src={service.video}
-              autoPlay
-              muted
-              loop
-              playsInline
-              poster={service.image}
-              className="absolute inset-0 w-full h-full object-cover"
-              style={{ objectPosition: service.objectPosition }}
-            />
-          )}
+          <video
+            src={service.video}
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster={service.image}
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{ objectPosition: service.objectPosition }}
+          />
           <div
             className="absolute inset-0"
             style={{
@@ -295,7 +274,6 @@ export default function Services() {
               src={s.image}
               alt={s.short}
               fill
-              unoptimized={s.no === "05"}
               sizes="(max-width: 768px) 100vw, 420px"
               className="object-cover transition-transform duration-500 group-hover:scale-105"
               style={{ objectPosition: s.objectPosition }}

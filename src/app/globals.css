@@ -58,37 +58,3 @@ section[id] {
   scroll-margin-top: 84px;
 }
 
-.security-feed__scan {
-  position: absolute;
-  inset: -30% 0 auto;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, rgba(203, 162, 88, .85), transparent);
-  box-shadow: 0 0 18px rgba(203, 162, 88, .6);
-  animation: security-scan 5s linear infinite;
-  pointer-events: none;
-}
-
-.security-feed__dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 999px;
-  background: #e35c4f;
-  box-shadow: 0 0 10px rgba(227, 92, 79, .8);
-  animation: security-pulse 1.5s ease-in-out infinite;
-}
-
-@keyframes security-scan {
-  from { transform: translateY(0); }
-  to { transform: translateY(420px); }
-}
-
-@keyframes security-pulse {
-  50% { opacity: .35; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .security-feed__scan,
-  .security-feed__dot {
-    animation: none;
-  }
-}
