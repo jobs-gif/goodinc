@@ -49,8 +49,10 @@ export default function Footer() {
           </div>
           <ul className="flex flex-col gap-2.5 text-[14px]">
             <li>전화 041-551-5111</li>
+            <li>휴대폰 010-3090-5356</li>
             <li>이메일 goodos@goodos.co.kr</li>
-            <li>주소 충남 천안시 동남구 충절로 128, 102호</li>
+            <li>굿모닝아이앤씨 충청남도 아산시 음봉면 연암율금로 43-1</li>
+            <li>본사 충청남도 천안시 동남구 충절로 128</li>
           </ul>
         </div>
       </div>
@@ -58,7 +60,7 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="mx-auto max-w-[1280px] px-6 py-6 text-[12px] text-white/40 flex flex-col sm:flex-row gap-2 sm:justify-between">
           <span>© 2026 GOODMORNING INC. All rights reserved.</span>
-          <span>사업자등록번호 000-00-00000 (입력 예정)</span>
+          <span>사업자등록번호 337-88-03907</span>
         </div>
       </div>
     </footer>

@@ -141,7 +141,7 @@ function InquiryModal({
             <p className="m-0 mt-3 text-[14px] leading-[1.7] text-muted">
               빠르게 확인하여 연락드리겠습니다.
               <br />
-              급하신 경우 041-551-5111 로 전화 주세요.
+              급하신 경우 041-551-5111 또는 010-3090-5356 으로 전화 주세요.
             </p>
             <button
               type="button"
@@ -241,7 +241,7 @@ function InquiryModal({
             </label>
             {status === "error" && (
               <p className="m-0 rounded-xl bg-[#fdecea] px-4 py-3 text-[13px] text-[#a93226]">
-                {error} 급하신 경우 041-551-5111 또는 goodos@goodos.co.kr 로
+                {error} 급하신 경우 041-551-5111, 010-3090-5356 또는 goodos@goodos.co.kr 로
                 연락 주세요.
               </p>
             )}

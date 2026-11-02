@@ -26,13 +26,13 @@ export default function ContactCta() {
           </InquiryButton>
         </div>
 
-        <div className="grid sm:grid-cols-3 gap-6 max-w-[720px] mx-auto text-left border-t border-white/15 pt-10">
+        <div className="grid sm:grid-cols-2 gap-x-10 gap-y-7 max-w-[760px] mx-auto text-left border-t border-white/15 pt-10">
           <div>
             <div className="text-gold/80 text-[12px] font-semibold tracking-[.06em] mb-2">
               전화
             </div>
             <div className="text-white text-[15px] font-medium">
-              041-551-5111
+              041-551-5111<br />휴대폰 010-3090-5356
             </div>
           </div>
           <div>
@@ -45,10 +45,18 @@ export default function ContactCta() {
           </div>
           <div>
             <div className="text-gold/80 text-[12px] font-semibold tracking-[.06em] mb-2">
-              주소
+              굿모닝아이앤씨
             </div>
             <div className="text-white text-[15px] font-medium">
-              충남 천안시 동남구 충절로 128, 102호
+              충청남도 아산시 음봉면 연암율금로 43-1
+            </div>
+          </div>
+          <div>
+            <div className="text-gold/80 text-[12px] font-semibold tracking-[.06em] mb-2">
+              본사
+            </div>
+            <div className="text-white text-[15px] font-medium">
+              충청남도 천안시 동남구 충절로 128
             </div>
           </div>
         </div>
