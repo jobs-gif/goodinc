@@ -18,7 +18,7 @@ export default function TrustBand() {
         >
           <div className="inline-flex self-start items-center gap-2 bg-accent-bg text-brand font-semibold text-[14px] px-4 py-[9px] rounded-full mb-7">
             <span className="w-1.5 h-1.5 rounded-full bg-brand inline-block" />
-            23년 검증된 종합 아웃소싱 파트너
+            24년 검증된 종합 아웃소싱 파트너
           </div>
           <h2 className="m-0 mb-5 font-bold text-navy text-[26px] md:text-[34px] lg:text-[40px] leading-[1.32] tracking-[-.02em] whitespace-nowrap">
             현장을 아는 사람들이

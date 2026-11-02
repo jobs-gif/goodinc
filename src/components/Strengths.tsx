@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const POINTS = [
   {
-    title: "23년 축적된 현장 노하우",
+    title: "24년 축적된 현장 노하우",
     desc: "2002년 설립 이후 제조·물류·경비·시설 전 영역에서 쌓아온 운영 경험으로 예측 가능한 결과를 만듭니다.",
   },
   {

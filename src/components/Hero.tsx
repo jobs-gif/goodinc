@@ -75,7 +75,7 @@ export default function Hero() {
           모두 해결하세요
         </h1>
         <p className="m-0 mb-10 text-white/85 text-[17px] md:text-[18px] leading-[1.7] max-w-[480px]">
-          23년간 쌓아온 운영 노하우로, 귀사가 본업에만 집중할 수 있도록
+          24년간 쌓아온 운영 노하우로, 귀사가 본업에만 집중할 수 있도록
           모든 현장을 책임집니다.
         </p>
         <div className="flex flex-wrap gap-3.5">

@@ -14,7 +14,6 @@ type Service = {
   desc: string;
   short: string;
   shortDesc: string;
-  legalBasis: string[];
   details: string[];
   detailNote: string;
 };
@@ -29,13 +28,10 @@ const SERVICES: Service[] = [
     desc: "전자·기계·식품 등 맞춤형 제조 라인 도급",
     short: "생산 도급",
     shortDesc: "제조 라인 운영",
-    legalBasis: ["생산 및 제조업", "인력공급 및 고용알선", "기타사업 지원 서비스업"],
     details: [
       "산업별 맞춤형 제조 라인 도급 운영",
-      "조립 · 포장 · 출하 전 공정 검사",
-      "데이터 기반 공정 개선 제안",
-      "품질검사(QC)로 불량률 관리",
-      "월간 성과 리포팅 제공",
+      "조립·포장·출하 전 공정 검사 및 QC 불량률 관리",
+      "데이터 기반 공정 개선 및 월간 성과 리포팅",
     ],
     detailNote: "숙련된 현장 관리자가 상주하며 생산성은 높이고 품질 리스크는 낮춥니다.",
   },
@@ -48,13 +44,10 @@ const SERVICES: Service[] = [
     desc: "물류센터부터 재고 관리까지 통합 운영",
     short: "물류 · 유통",
     shortDesc: "창고 · 위탁 운영",
-    legalBasis: ["복합운송 주선업", "인력공급 및 고용알선", "부대사업 전반"],
     details: [
-      "물류센터 · 허브창고 통합 위탁 운영",
-      "입출고 · 피킹 · 패킹 · 검수 전 과정 관리",
-      "WMS 기반 실시간 재고 관리",
-      "상하차 · 지게차 등 전문 인력 운영",
-      "성수기 물량 급증 시 탄력 인력 투입",
+      "물류센터·허브창고 통합 위탁 운영",
+      "입출고·피킹·패킹·검수 전 과정 및 WMS 실시간 재고 관리",
+      "상하차·지게차 전문 인력, 성수기 탄력 인력 투입",
     ],
     detailNote: "정교한 물류 프로세스와 기동성 있는 인력 매칭으로 효율은 높이고 비용은 줄입니다.",
   },
@@ -64,18 +57,15 @@ const SERVICES: Service[] = [
     video: "/assets/vid-handshake.mp4",
     objectPosition: "center 35%",
     title: "인력 파견 ·\nHR 아웃소싱",
-    desc: "23년 매칭 노하우, 준법 인사관리",
+    desc: "24년 매칭 노하우, 준법 인사관리",
     short: "인력 파견",
     shortDesc: "HR 아웃소싱",
-    legalBasis: ["인력공급 및 고용알선", "근로자 파견업", "경영 컨설팅업"],
     details: [
-      "사무 · 비서직 파견 운영",
-      "F&B · 유통 · 고객서비스 인력 공급",
+      "사무·비서직, F&B·유통·고객서비스 인력 공급",
       "맞춤형 채용대행 및 인재 발굴",
-      "인사 · 노무 준법 관리",
-      "파견 근로자 복리후생 케어",
+      "인사·노무 준법 관리 및 파견 근로자 복리후생 케어",
     ],
-    detailNote: "23년 매칭 노하우와 철저한 준법 관리로 가장 적합한 인적자원을 연결합니다.",
+    detailNote: "24년 매칭 노하우와 철저한 준법 관리로 가장 적합한 인적자원을 연결합니다.",
   },
   {
     no: "04",
@@ -86,13 +76,10 @@ const SERVICES: Service[] = [
     desc: "건물 환경 · 설비 통합 운영",
     short: "빌딩 · 시설",
     shortDesc: "설비 유지 관리",
-    legalBasis: ["건물시설관리용역", "시설물 유지관리업", "공동주택 · 집합건물 관리업"],
     details: [
-      "전기 · 소방 · 냉난방 설비 관리",
-      "시설물 정기 점검 및 유지보수",
-      "주차 관리 · 안내 데스크 운영",
-      "수처리 · 정화조 관리",
-      "법정 안전 점검 대응",
+      "전기·소방·냉난방·수처리 설비 관리",
+      "시설물 정기 점검 및 법정 안전 점검 대응",
+      "주차 관리·안내 데스크 운영",
     ],
     detailNote: "설비 전문가와 관리 인력이 협업해 365일 안전하고 쾌적한 환경을 만듭니다.",
   },
@@ -105,12 +92,10 @@ const SERVICES: Service[] = [
     desc: "시설경비업 정식 허가, 24시간 모니터링",
     short: "보안 · 경비",
     shortDesc: "시설 경비",
-    legalBasis: ["시설경비업", "경비 용역업", "사업시설 관리 서비스업"],
     details: [
       "상주 경비 및 정기 순찰",
-      "출입통제 · 방문객 관리",
-      "비상상황 대응 매뉴얼 운영",
-      "공동주택 · 집합건물 경비 위탁",
+      "출입통제·방문객 관리",
+      "비상상황 대응 매뉴얼 운영 (공동주택·집합건물 경비 위탁 포함)",
     ],
     detailNote: "빈틈없는 출입통제와 모니터링으로 고객사의 자산을 안전하게 지킵니다.",
   },
@@ -123,13 +108,10 @@ const SERVICES: Service[] = [
     desc: "위생관리용역업 허가, 친환경 클리닝",
     short: "미화 · 위생",
     shortDesc: "위생 관리",
-    legalBasis: ["위생관리용역업", "청소 용역업", "소독 방제업"],
     details: [
-      "오피스 · 상업시설 상시 미화",
-      "분기별 특수 클리닝 (바닥 · 외벽)",
-      "정기 소독 및 맞춤 방역",
-      "친환경 약품 · 전문 장비 사용",
-      "실시간 청결도 점검",
+      "오피스·상업시설 상시 미화",
+      "분기별 특수 클리닝(바닥·외벽) 및 정기 소독·방역",
+      "친환경 약품·전문 장비 사용, 실시간 청결도 점검",
     ],
     detailNote: "전문 교육을 받은 미화 인력이 위생 등급을 높이고 쾌적한 공간을 만듭니다.",
   },
@@ -202,19 +184,6 @@ function ServiceModal({
         </div>
 
         <div className="p-7 md:p-9">
-          <div className="font-semibold text-brand text-[13px] tracking-[.06em] mb-3">
-            법적 근거 (등기부등본 · 사업자등록증 종목)
-          </div>
-          <div className="flex flex-wrap gap-2 mb-7">
-            {service.legalBasis.map((b) => (
-              <span
-                key={b}
-                className="text-[13px] font-medium text-navy bg-accent-bg rounded-full px-3.5 py-[6px]"
-              >
-                {b}
-              </span>
-            ))}
-          </div>
           <div className="font-semibold text-brand text-[13px] tracking-[.06em] mb-4">
             세부 사업 내역
           </div>

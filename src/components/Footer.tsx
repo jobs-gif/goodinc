@@ -25,7 +25,7 @@ export default function Footer() {
           <p className="text-[13px] leading-[1.8] max-w-[360px]">
             생산·물류·인력·시설·보안·미화 전 영역 종합 아웃소싱 파트너.
             <br />
-            23년 현장 운영 노하우와 자체 인재 DB로 함께합니다.
+            24년 현장 운영 노하우와 자체 인재 DB로 함께합니다.
           </p>
         </div>
 
