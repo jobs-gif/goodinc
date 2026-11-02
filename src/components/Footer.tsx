@@ -52,7 +52,6 @@ export default function Footer() {
             <li>휴대폰 010-3090-5356</li>
             <li>이메일 goodos@goodos.co.kr</li>
             <li>굿모닝아이앤씨 충청남도 아산시 음봉면 연암율금로 43-1</li>
-            <li>본사 충청남도 천안시 동남구 충절로 128</li>
           </ul>
         </div>
       </div>

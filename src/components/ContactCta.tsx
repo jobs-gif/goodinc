@@ -43,20 +43,12 @@ export default function ContactCta() {
               goodos@goodos.co.kr
             </div>
           </div>
-          <div>
+          <div className="sm:col-span-2">
             <div className="text-gold/80 text-[12px] font-semibold tracking-[.06em] mb-2">
               굿모닝아이앤씨
             </div>
             <div className="text-white text-[15px] font-medium">
               충청남도 아산시 음봉면 연암율금로 43-1
-            </div>
-          </div>
-          <div>
-            <div className="text-gold/80 text-[12px] font-semibold tracking-[.06em] mb-2">
-              본사
-            </div>
-            <div className="text-white text-[15px] font-medium">
-              충청남도 천안시 동남구 충절로 128
             </div>
           </div>
         </div>
